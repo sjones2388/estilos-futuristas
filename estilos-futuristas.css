@@ -389,3 +389,13 @@ div.copyright {
     padding-top: 10px;
     padding-bottom: 50px;
 }
+/* Cambios en el campo de texto donde se escribe */
+.bpw-composer textarea#input-message {
+    background-color: #333333 !important; /* Fondo oscuro */
+    color: #ffffff !important; /* Texto en blanco */
+    border: 2px solid #00ff00 !important; /* Bordes verdes */
+    padding: 10px !important; /* Espacio interior */
+    border-radius: 10px !important; /* Bordes redondeados */
+    font-size: 16px !important; /* Tamaño de fuente */
+    line-height: 1.5 !important; /* Altura de línea */
+}
