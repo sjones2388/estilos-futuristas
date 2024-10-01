@@ -1,435 +1,255 @@
-/* slidy.css
-
-   Copyright (c) 2005-2010 W3C (MIT, ERCIM, Keio), All Rights Reserved.
-   W3C liability, trademark, document use and software licensing
-   rules apply, see:
-
-   http://www.w3.org/Consortium/Legal/copyright-documents
-   http://www.w3.org/Consortium/Legal/copyright-software
-*/
-body
-{
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
-  width: 100%;
-  height: 100%;
-  color: black;
-  background-color: white;
-  font-family: "Gill Sans MT", "Gill Sans", GillSans, sans-serif;
-  font-size: 14pt;
+/* This CSS rule sets the default font size of the entire document */
+html {
+  font-size: 16px;
 }
 
-div.toolbar {
-  position: fixed; z-index: 200;
-  top: auto; bottom: 0; left: 0; right: 0;
-  height: 1.2em; text-align: right;
-  padding-left: 1em;
-  padding-right: 1em; 
-  font-size: 60%;
-  color: DimGray;
-  background-color: rgb(240,240,240);
-  border-top: solid 1px rgb(180,180,180);
+/* These CSS rules sets the text direction of the paragraph (RTL or LTR) */
+p,
+.bpw-from-bot > div,
+#input-message {
+  direction: ltr;
 }
 
-div.toolbar span.copyright {
-  color: DimGray;
-  margin-left: 0.5em;
+/* This rule changes the color of the text in the input message */
+#input-message {
+  color: #000000;
 }
 
-div.initial_prompt {
-  position: absolute;
-  z-index: 1000;
-  bottom: 1.2em;
-  width: 100%;
-  background-color: rgb(200,200,200);
-  opacity: 0.35;
-  background-color: rgb(200,200,200, 0.35);
-  cursor: pointer;
+/* Changes the color of the new message indicator */
+.bpw-new-messages-indicator {
+  background-color: #f5f5f5;
+  color: #ffffff;
 }
 
-div.initial_prompt p.help {
-  text-align: center;
+/* Styling for the chat header container FONDO ROJO DEL TACO CONTENEDOR DEL TITULO*/
+.bpw-header-container {
+  margin: 10px;
+  background: #e62708;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  border: 1px;
+  border-radius: 60px;
+  color: #ffffff;
+  box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.2);
 }
 
-div.initial_prompt p.close {
-  text-align: right;
-  font-style: italic;
+.bpw-header-name{
+  color: #ffffff;
 }
 
-div.slidy_toc {
-  position: absolute;
-  z-index: 300;
-  width: 60%;
-  max-width: 30em;
-  height: 30em;
-  overflow: auto;
-  top: auto;
-  right: auto;
-  left: 4em;
-  bottom: 4em;
-  padding: 1em;
-  background: rgb(240,240,240);
-  border-style: solid;
-  border-width: 2px;
-  font-size: 60%;
+/* Styling for the typing bubble */
+.bpw-typing-bubble {
+  background: #000000;
 }
 
-div.slidy_toc .toc_heading {
-  text-align: center;
-  width: 100%;
-  margin: 0;
-  margin-bottom: 1em;
-  border-bottom-style: solid;
-  border-bottom-color: rgb(180,180,180);
-  border-bottom-width: 1px;
+/* Styling for the chat bubble content */
+.bpw-chat-bubble-content {
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  border: 1px transparent;
 }
 
-div.slide {
-  z-index: 20;
-  margin: 0 0 0 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-width: 0;
-  clear: both;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  line-height: 120%;
+/* Styling for the date container, header name, and header subtitle */
+.bpw-date-container,
+.bpw-header-name,
+.bpw-header-subtitle {
+  color: #ffffff;
+}
+
+/* Styling for the layout of the chat bubble. Width, height, border, position and radius of the chat bubble */
+.bpw-layout {
+  width: 360px !important;
+  height: 60vh;
+  border-radius: 10px;
+  right: 10px;
+  bottom: 5px;
+  border: 1px;
+}
+/* Responsive design rules for devices with width less than or equal to 767px */
+@media screen and (max-device-width: 767px) {
+  .bpw-layout {
+    width: 100% !important;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    border-radius: 0;
+  }
+}
+
+/* Changes the fill color of the header icons to white */
+.bpw-header-icon,
+.bpw-header-icon svg,
+.bpw-header-icon svg path {
+  fill: #ffffff !important;
+}
+
+/* Changes the color of the placeholder text in the input message */
+#input-message::placeholder {
+  color: rgba(0,0,0,.30);
+}
+
+.bpw-composer textarea{
+  outline: none !important;
+  border: 1px solid rgba(0,0,0,.15);
+}
+.bpw-composer textarea:focus{
+  outline: none !important;
+  border: 1px solid rgba(0,0,0,.30);
+}
+
+/* Styling for the keyboard single choice option  FONDO TOTAL DE LAS PALABRAS SUGERIDAS */
+.bpw-keyboard-single-choice {
+  background-color: #dcdcdc;
+  border: none;
+}
+
+/* Styling for the buttons in the chat interface FONDO DEL TAQUITO DE LAS PALABRAS SUGERIDAS*/
+.bpw-button,
+.bpw-button-alt {
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 10px;
+  border: none;
+}
+
+
+/* Styling for hover effect on the buttons in the chat interface */
+.bpw-button:hover,
+.bpw-button-alt:hover {
+  background-color: #f5f5f5;
+}
+
+
+/* Styling for hyperlinks in the chat interface */
+a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Styling for the chat container, including color, scrollbar width and color, and border FONDO DE TODO EL CHAT Y BARRA DE SCROLL*/ 
+.bpw-chat-container {
+  background-color: #ebebeb;
+  scrollbar-width: thin;
+  scrollbar-color: #b5b5b5 #f1f1f1;
+  border: none;
+}
+
+/* Styling for the chat bubble content when it's from the bot */
+.bpw-from-bot .bpw-chat-bubble .bpw-chat-bubble-content {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Styling for the chat bubble content when it's from the user 777*/
+.bpw-from-user .bpw-chat-bubble .bpw-chat-bubble-content {
+  background-color: #575757;
+  color: #ffffff;
+}
+
+/* Styling for the composer section of the chat interface */
+.bpw-composer {
+  background-color: #ffffff;
+  border-top: none;
+}
+
+
+/* Styling for the scrollbar in the chat container */
+.bpw-chat-container::-webkit-scrollbar,
+.bpw-chat-container::-moz-scrollbar {
+  width: 10px;
+  background-color: #ffffff;
+  border: none;
+}
+
+/* Styling for the avatar of the bot */
+.bpw-bot-avatar img,
+.bpw-bot-avatar svg {
+  background: #000000;
+  border: 3px solid #ffffff;
+}
+
+/* Styling for the general scrollbar in the web page */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+/* Styling for the track of the general scrollbar and the chat container scrollbar */
+::-webkit-scrollbar-track,
+.bpw-chat-container::-webkit-scrollbar-track,
+.bpw-chat-container::-moz-scrollbar-track {
   background-color: transparent;
 }
 
-div.background {
-  display: none;
+/* Styling for the thumb of the general scrollbar and the chat container scrollbar */
+::-webkit-scrollbar-thumb,
+.bpw-chat-container::-webkit-scrollbar-thumb,
+.bpw-chat-container::-moz-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  border: 0.5rem solid transparent;
 }
 
-div.handout {
-  margin-left: 20px;
-  margin-right: 20px;
+/* Styling for the floating button icon in the chat interface GGGGG */
+.bpw-floating-button i svg path {
+  fill: #e62708;
 }
 
-div.slide.titlepage {
+
+
+/* Styling for the 'powered by' section of the chat interface */
+.bpw-powered {
   text-align: center;
+  padding: 10px;
+  color: #000000;
+  background: #ffffff;
+  font-size: 14px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
-div.slide.titlepage h1 {
-  padding-top: 10%;
-  margin-right: 0;
+/* Styling for the hyperlinks in the 'powered by' section of the chat interface */
+.bpw-powered a {
+  color: #000000;
+  text-decoration: underline;
 }
 
-div.slide h1 {
-  padding-left: 0;
-  padding-right: 20pt;
-  padding-top: 4pt;
-  padding-bottom: 4pt;
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 60pt;
-  margin-bottom: 0.5em;
-  display: block; 
-  font-size: 160%;
-  line-height: 1.2em;
-  background: transparent;
-}
-
-@media screen and (max-device-width: 1024px)
-{
-  div.slide { font-size: 100%; }
-}
-
-@media screen and (max-device-width: 800px)
-{
-  div.slide { font-size: 200%; }
-  div.slidy_toc {
-    top: 1em;
-    left: 1em;
-    right: auto;
-    width: 80%;
-    font-size: 180%;
-  }
-}
-
-div.toc-heading {
-  width: 100%;
-  border-bottom: solid 1px rgb(180,180,180);
-  margin-bottom: 1em;
-  text-align: center;
-}
-
-img {
-  image-rendering: optimize-quality;
-}
-
-pre {
- font-size: 80%;
- font-weight: bold;
- line-height: 120%;
- padding-top: 0.2em;
- padding-bottom: 0.2em;
- padding-left: 1em;
- padding-right: 1em;
- border-style: solid;
- border-left-width: 1em;
- border-top-width: thin;
- border-right-width: thin;
- border-bottom-width: thin;
- border-color: #95ABD0;
- color: #00428C;
- background-color: #E4E5E7;
-}
-
-li pre { margin-left: 0; }
-
-blockquote { font-style: italic }
-
-img { background-color: transparent }
-
-p.copyright { font-size: smaller }
-
-.center { text-align: center }
-.footnote { font-size: smaller; margin-left: 2em; }
-
-a img { border-width: 0; border-style: none }
-
-a:visited { color: navy }
-a:link { color: navy }
-a:hover { color: red; text-decoration: underline }
-a:active { color: red; text-decoration: underline }
-
-a {text-decoration: none}
-.toolbar a:link {color: blue}
-.toolbar a:visited {color: blue}
-.toolbar a:active {color: red}
-.toolbar a:hover {color: red}
-
-ul { list-style-type: square; }
-ul ul { list-style-type: disc; }
-ul ul ul { list-style-type: circle; }
-ul ul ul ul { list-style-type: disc; }
-li { margin-left: 0.5em; margin-top: 0.5em; }
-li li { font-size: 85%; font-style: italic }
-li li li { font-size: 85%; font-style: normal }
-
-div dt
-{
-  margin-left: 0;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-  font-weight: bold;
-}
-div dd
-{
-  margin-left: 2em;
-  margin-bottom: 0.5em;
+/* Styling for hover effect on the hyperlinks in the 'powered by' section of the chat interface */
+.bpw-powered a:hover {
+  text-decoration: underline;
 }
 
 
-p,pre,ul,ol,blockquote,h2,h3,h4,h5,h6,dl,table {
-  margin-left: 1em;
-  margin-right: 1em;
-}
-
-p.subhead { font-weight: bold; margin-top: 2em; }
-
-.smaller { font-size: smaller }
-.bigger { font-size: 130% }
-
-td,th { padding: 0.2em }
-
-ul {
-  margin: 0.5em 1.5em 0.5em 1.5em;
-  padding: 0;
-}
-
-ol {
-  margin: 0.5em 1.5em 0.5em 1.5em;
-  padding: 0;
-}
-
-ul { list-style-type: square; }
-ul ul { list-style-type: disc; }
-ul ul ul { list-style-type: circle; }
-ul ul ul ul { list-style-type: disc; }
-
-ul li { 
-  list-style: square;
-  margin: 0.1em 0em 0.6em 0;
-  padding: 0 0 0 0;
-  line-height: 140%;
-}
-
-ol li { 
-  margin: 0.1em 0em 0.6em 1.5em;
-  padding: 0 0 0 0px;
-  line-height: 140%;
-  list-style-type: decimal;
-}
-
-li ul li { 
-  font-size: 85%; 
-  font-style: italic;
-  list-style-type: disc;
-  background: transparent;
-  padding: 0 0 0 0;
-}
-li li ul li { 
-  font-size: 85%; 
-  font-style: normal;
-  list-style-type: circle;
-  background: transparent;
-  padding: 0 0 0 0;
-}
-li li li ul li {
-  list-style-type: disc;
-  background: transparent;
-  padding: 0 0 0 0;
-}
-
-li ol li {
-  list-style-type: decimal;
+/* COLOR DEL BOTONCHITO CHIQUITO DE ENVIAR MENSAJE */
+.bpw-send-button{
+  background: #e62708;
 }
 
 
-li li ol li {
-  list-style-type: decimal;
+/* Change Bot Widget Icon CREO Q ES EL BOTNCITO DE AFUERA */
+
+.bpw-widget-btn{
+  border-radius: 50%;
+  background:#e62708;
 }
 
-/*
- setting class="outline on ol or ul makes it behave as an
- ouline list where blocklevel content in li elements is
- hidden by default and can be expanded or collapsed with
- mouse click. Set class="expand" on li to override default
-*/
-
-ol.outline li:hover { cursor: pointer }
-ol.outline li.nofold:hover { cursor: default }
-
-ul.outline li:hover { cursor: pointer }
-ul.outline li.nofold:hover { cursor: default }
-
-ol.outline { list-style:decimal; }
-ol.outline ol { list-style-type:lower-alpha }
-
-ol.outline li.nofold {
-  padding: 0 0 0 20px;
-  background: transparent url(../graphics/nofold-dim.gif) no-repeat 0px 0.5em;
-}
-ol.outline li.unfolded {
-  padding: 0 0 0 20px;
-  background: transparent url(../graphics/fold-dim.gif) no-repeat 0px 0.5em;
-}
-ol.outline li.folded {
-  padding: 0 0 0 20px;
-  background: transparent url(../graphics/unfold-dim.gif) no-repeat 0px 0.5em;
-}
-ol.outline li.unfolded:hover {
-  padding: 0 0 0 20px;
-  background: transparent url(../graphics/fold.gif) no-repeat 0px 0.5em;
-}
-ol.outline li.folded:hover {
-  padding: 0 0 0 20px;
-  background: transparent url(../graphics/unfold.gif) no-repeat 0px 0.5em;
+.bpw-floating-button::before {
+background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='white' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z' /%3E%3C/svg%3E");
+background-repeat: no-repeat;
+  background-position: center;
+background-size: contain;
+height:undefinedpx !important;
+width:undefinedpx !important;
 }
 
-ul.outline li.nofold {
-  padding: 0 0 0 20px;
-  background: transparent url(../graphics/nofold-dim.gif) no-repeat 0px 0.5em;
-}
-ul.outline li.unfolded {
-  padding: 0 0 0 20px;
-  background: transparent url(../graphics/fold-dim.gif) no-repeat 0px 0.5em;
-}
-ul.outline li.folded {
-  padding: 0 0 0 20px;
-  background: transparent url(../graphics/unfold-dim.gif) no-repeat 0px 0.5em;
-}
-ul.outline li.unfolded:hover {
-  padding: 0 0 0 20px;
-  background: transparent url(../graphics/fold.gif) no-repeat 0px 0.5em;
-}
-ul.outline li.folded:hover {
-  padding: 0 0 0 20px;
-  background: transparent url(../graphics/unfold.gif) no-repeat 0px 0.5em;
+.bpw-floating-button {
+  box-shadow: none !important;
 }
 
-/* for slides with class "title" in table of contents */
-a.titleslide { font-weight: bold; font-style: italic }
-
-/*
- hide images for work around for save as bug
- where browsers fail to save images used by CSS
-*/
-img.hidden { display: none; visibility: hidden }
-div.initial_prompt { display: none; visibility: hidden }
-
-  div.slide {
-     visibility: visible;
-     position: inherit;
-  }
-  div.handout {
-     border-top-style: solid;
-     border-top-width: thin;
-     border-top-color: black;
-  }
-
-@media screen {
-  .hidden { display: none; visibility: visible }
-
-  div.slide.hidden { display: block; visibility: visible }
-  div.handout.hidden { display: block; visibility: visible }
-  div.background { display: none; visibility: hidden }
-  body.single_slide div.initial_prompt { display: block; visibility: visible }
-  body.single_slide div.background { display: block; visibility: visible }
-  body.single_slide div.background.hidden { display: none; visibility: hidden }
-  body.single_slide .invisible { visibility: hidden }
-  body.single_slide .hidden { display: none; visibility: hidden }
-  body.single_slide div.slide { position: absolute }
-  body.single_slide div.handout { display: none; visibility: hidden }
+.bpw-floating-button:hover {
+  box-shadow: none !important;
 }
 
-@media print {
-  .hidden { display: block; visibility: visible }
-
-  div.slide pre { font-size: 60%; padding-left: 0.5em; }
-  div.toolbar { display: none; visibility: hidden; }
-  div.slidy_toc { display: none; visibility: hidden; }
-  div.background { display: none; visibility: hidden; }
-  div.slide { page-break-before: always }
-  /* :first-child isn't reliable for print media */
-  div.slide.first-slide { page-break-before: avoid }
-}
-
-/* the below rules increase compatibility with Shiny and Bootstrap */
-
-/* remove margins that misalign sliders */
-.jslider table {
-   margin-left: 0em;
-   margin-right: 0em;
-}
-
-/* don't use very large fonts in datatables */
-table.dataTable, .shiny-datatable-output div {
-   font-size: 14pt;
-}
-
-/* adjust footer element size for DT package */
-.dataTables_info, .dataTables_paginate {
-  font-size: 19px;
-}
-
-/* allow R chunks to render in a large font */
-pre.sourceCode, code.sourceCode {
-   font-size: 80%;
-}
-
-/* increase the input font size set by Bootstrap */
-label, button, input, select, textarea {
-   font-size: 14pt;
-}
-
-/* eliminate bullets in Bootstrap navigation lists */
-ul.nav, ul.nav li {
-   list-style-type: none;
-}
+// .bpw-floating-button > i {
+// display: none;
+// }
