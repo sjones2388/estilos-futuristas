@@ -1,94 +1,127 @@
-/* Fondo general oscuro con tono más suave */
+/* Fondo general claro */
 body {
-    font: medium/150% "Lucida Grande", sans-serif;
+    font-family: "Helvetica Neue", sans-serif;
     margin: 0;
-    padding: 0 0 10px;
-    color: #e0e0e0;
-    background-color: #1f1f1f;
+    padding: 0;
+    background-color: #ece5dd;
 }
 
-/* Cabecera del chatbot */
+/* Cabecera del chat con estilo WhatsApp */
 .bpw-header-container {
-    background-color: #008080 !important; /* Verde azulado más oscuro */
+    background-color: #075E54 !important; /* Verde WhatsApp */
     color: #ffffff;
     font-weight: bold;
-    border-radius: 5px 5px 0 0;
-}
-
-/* Estilo para los mensajes del bot */
-.bpw-chat-bubble.bp-bubble-text {
-    background-color: #2a2a2a !important; /* Fondo gris oscuro suave */
-    color: #e0e0e0 !important; /* Texto gris claro */
-    border: 1px solid #008080 !important; /* Borde verde azulado */
-    border-radius: 10px;
-    padding: 10px;
-}
-
-/* Estilo para los mensajes del usuario */
-.bpw-chat-bubble.bp-bubble-text[data-from="Me"] {
-    background-color: #3a3a3a !important; /* Fondo gris medio */
-    color: #00ffff !important; /* Texto azul cian */
-    border: 1px solid #00ffff !important; /* Borde azul cian */
-    border-radius: 10px;
-    padding: 10px;
-}
-
-/* Campo de texto */
-.bpw-composer textarea#input-message {
-    background-color: #2a2a2a !important; /* Fondo gris oscuro */
-    color: #00ff99 !important; /* Texto verde neón */
-    border: 2px solid #00ff99 !important; /* Bordes verdes neón */
-    padding: 10px !important;
-    border-radius: 10px !important;
-    font-size: 16px !important;
-    line-height: 1.5 !important;
-}
-
-/* Botones de acción con un estilo más moderno */
-.bpw-send-buttons button {
-    background-color: #008080 !important; /* Verde azulado */
-    color: #ffffff !important; /* Texto blanco */
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.bpw-send-buttons button:hover {
-    background-color: #00ff99 !important; /* Verde neón al pasar el mouse */
-    color: #ffffff !important;
-}
-
-/* Links del footer */
-.bpw-footer a {
-    color: #00ffff !important; /* Enlaces cian */
-    text-decoration: none;
-}
-
-.bpw-footer a:hover {
-    color: #00ff99 !important; /* Enlaces en verde neón al pasar el mouse */
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    font-size: 20px;
+    border-radius: 0;
+    padding-right: 10px;
 }
 
 /* Fondo del chat */
 .bpw-msg-list-container {
-    background-color: #1f1f1f !important; /* Fondo oscuro más sutil */
+    background-color: #ece5dd !important; /* Fondo gris claro */
+    padding: 20px;
+    overflow-y: auto;
+    height: calc(100vh - 120px); /* Espacio dinámico para los mensajes */
 }
 
-/* Estilo de transiciones para suavidad */
+/* Mensaje del bot (similar a los mensajes de otros contactos en WhatsApp) */
+.bpw-chat-bubble.bp-bubble-text {
+    background-color: #ffffff !important; /* Fondo blanco */
+    color: #000000 !important; /* Texto negro */
+    border: 1px solid #e5e5e5;
+    border-radius: 7.5px 7.5px 7.5px 0; /* Bordes redondeados */
+    padding: 10px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    position: relative;
+    margin-right: auto; /* Mensajes del bot a la izquierda */
+    word-wrap: break-word;
+}
+
+/* Mensaje del usuario (similar a los mensajes del usuario en WhatsApp) */
+.bpw-chat-bubble.bp-bubble-text[data-from="Me"] {
+    background-color: #dcf8c6 !important; /* Verde claro para el usuario */
+    color: #000000 !important;
+    border-radius: 7.5px 7.5px 0 7.5px; /* Bordes redondeados */
+    padding: 10px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    margin-left: auto; /* Mensajes del usuario a la derecha */
+    word-wrap: break-word;
+}
+
+/* Campo de texto */
+.bpw-composer textarea#input-message {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #ddd !important;
+    padding: 10px !important;
+    border-radius: 20px !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    width: 100%;
+    margin-right: 10px;
+    box-shadow: none;
+    resize: none;
+    height: 40px; /* Tamaño más pequeño */
+}
+
+/* Botón de envío */
+.bpw-send-buttons button {
+    background-color: #075E54 !important; /* Verde WhatsApp */
+    color: #ffffff !important;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.bpw-send-buttons button:hover {
+    background-color: #128C7E !important; /* Color más claro al pasar el mouse */
+}
+
+/* Footer del chat (como el mensaje de WhatsApp) */
+.bpw-footer {
+    background-color: #ece5dd !important;
+    color: #000000 !important;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Ajustar el diseño del contenedor del campo de texto */
+.bpw-composer-inner {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-top: 1px solid #ddd;
+}
+
+/* Ajustes visuales generales */
 .bpw-chat-bubble,
 .bpw-composer textarea#input-message,
 .bpw-send-buttons button {
     transition: all 0.3s ease-in-out !important;
 }
 
-/* Estilo para los títulos */
-h1, h2, h3, h4 {
-    color: #00ff99; /* Verde neón suave para los títulos */
-}
-
 /* Sombra sutil para los mensajes */
 .bpw-chat-bubble.bp-bubble-text {
-    box-shadow: 0 0 5px rgba(0, 255, 153, 0.2); /* Sombra suave verde */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Títulos y textos */
+h1, h2, h3, h4 {
+    color: #075E54;
 }
