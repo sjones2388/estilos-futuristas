@@ -34,10 +34,10 @@ p,
   box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Oculta el contenido original del nombre y subtítulo */
+/* Oculta el contenido original sin afectar los pseudoelementos */
 .bpw-header-name,
 .bpw-header-subtitle {
-  display: none;
+  visibility: hidden; /* Oculta el contenido original */
 }
 
 /* Cambiar el nombre a IA Megatone.net usando ::before */
@@ -47,6 +47,7 @@ p,
   color: #ffffff;
   font-size: 20px;
   font-weight: bold;
+  visibility: visible; /* Asegura que sea visible */
 }
 
 /* Cambiar la leyenda a Especialista en CELULARES usando ::before */
@@ -56,6 +57,7 @@ p,
   color: #ffffff;
   font-size: 14px;
   margin-top: 5px;
+  visibility: visible; /* Asegura que sea visible */
 }
 
 /* Styling for the typing bubble */
