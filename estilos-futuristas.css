@@ -1,37 +1,37 @@
 /* Fondo del cuerpo */
 body {
-    background-color: #000000 !important; /* Fondo completamente negro */
-    color: #00ff00 !important; /* Texto en color verde brillante */
+    background-color: #000000 !important;
+    color: #00ff00 !important;
     font-family: 'Arial', sans-serif !important;
 }
 
 /* Estilo de botones */
 button {
-    background-color: #ff0000 !important; /* Fondo rojo para los botones */
-    color: #ffffff !important; /* Texto blanco */
-    font-size: 20px !important; /* Aumenta el tamaño del texto */
-    padding: 15px !important; /* Aumenta el espacio dentro del botón */
-    border-radius: 20px !important; /* Bordes redondeados */
-    border: 3px solid #00ff00 !important; /* Bordes verdes */
-    transition: background-color 0.5s ease !important; /* Transición suave */
+    background-color: #ff0000 !important;
+    color: #ffffff !important;
+    font-size: 20px !important;
+    padding: 15px !important;
+    border-radius: 20px !important;
+    border: 3px solid #00ff00 !important;
+    transition: background-color 0.5s ease !important;
 }
 
 button:hover {
-    background-color: #00ff00 !important; /* Cambia el fondo a verde al pasar el mouse */
-    color: #000000 !important; /* Cambia el texto a negro */
+    background-color: #00ff00 !important;
+    color: #000000 !important;
 }
 
 /* Estilo para los mensajes de chat */
 .botpress__message-container {
-    background-color: #000000 !important; /* Fondo negro */
-    border-radius: 15px !important; /* Bordes redondeados */
-    padding: 20px !important; /* Aumenta el padding */
+    background-color: #000000 !important;
+    border-radius: 15px !important;
+    padding: 20px !important;
 }
 
 .botpress__message-bubble {
-    background-color: #ff00ff !important; /* Fondo rosa brillante para los mensajes */
-    color: #ffffff !important; /* Texto blanco */
+    background-color: #ff00ff !important;
+    color: #ffffff !important;
     border-radius: 15px !important;
     padding: 15px !important;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5) !important; /* Sombra blanca */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5) !important;
 }
