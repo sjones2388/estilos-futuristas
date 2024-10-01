@@ -1,0 +1,41 @@
+/* Fondo oscuro con colores de neón */
+body {
+    background-color: #0d0d0d; /* Fondo oscuro */
+    color: #00ffcc; /* Texto en color neón */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Botones con estilo futurista */
+button {
+    background-color: #0d0d0d;
+    border: 2px solid #00ffcc; /* Bordes brillantes */
+    color: #00ffcc;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc; /* Brillo alrededor */
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #00ffcc; /* Cambia de color al pasar el mouse */
+    color: #0d0d0d;
+    box-shadow: 0 0 20px #00ffcc, 0 0 30px #00ffcc; /* Incrementa el brillo */
+}
+
+/* Estilo para contenedores de chat */
+.botpress__message-container {
+    padding: 10px;
+    background-color: #1a1a1a; /* Fondo gris oscuro */
+    border-radius: 10px;
+}
+
+/* Texto y burbujas de mensajes */
+.botpress__message-bubble {
+    background-color: #262626;
+    color: #00ffcc;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+}
