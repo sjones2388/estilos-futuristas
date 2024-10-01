@@ -1,41 +1,37 @@
-/* Fondo oscuro con colores de neón */
+/* Fondo del cuerpo */
 body {
-    background-color: #0d0d0d; /* Fondo oscuro */
-    color: #00ffcc; /* Texto en color neón */
-    font-family: 'Roboto', sans-serif;
+    background-color: #000000 !important; /* Fondo completamente negro */
+    color: #00ff00 !important; /* Texto en color verde brillante */
+    font-family: 'Arial', sans-serif !important;
 }
 
-/* Botones con estilo futurista */
+/* Estilo de botones */
 button {
-    background-color: #0d0d0d;
-    border: 2px solid #00ffcc; /* Bordes brillantes */
-    color: #00ffcc;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc; /* Brillo alrededor */
-    transition: 0.3s;
+    background-color: #ff0000 !important; /* Fondo rojo para los botones */
+    color: #ffffff !important; /* Texto blanco */
+    font-size: 20px !important; /* Aumenta el tamaño del texto */
+    padding: 15px !important; /* Aumenta el espacio dentro del botón */
+    border-radius: 20px !important; /* Bordes redondeados */
+    border: 3px solid #00ff00 !important; /* Bordes verdes */
+    transition: background-color 0.5s ease !important; /* Transición suave */
 }
 
 button:hover {
-    background-color: #00ffcc; /* Cambia de color al pasar el mouse */
-    color: #0d0d0d;
-    box-shadow: 0 0 20px #00ffcc, 0 0 30px #00ffcc; /* Incrementa el brillo */
+    background-color: #00ff00 !important; /* Cambia el fondo a verde al pasar el mouse */
+    color: #000000 !important; /* Cambia el texto a negro */
 }
 
-/* Estilo para contenedores de chat */
+/* Estilo para los mensajes de chat */
 .botpress__message-container {
-    padding: 10px;
-    background-color: #1a1a1a; /* Fondo gris oscuro */
-    border-radius: 10px;
+    background-color: #000000 !important; /* Fondo negro */
+    border-radius: 15px !important; /* Bordes redondeados */
+    padding: 20px !important; /* Aumenta el padding */
 }
 
-/* Texto y burbujas de mensajes */
 .botpress__message-bubble {
-    background-color: #262626;
-    color: #00ffcc;
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+    background-color: #ff00ff !important; /* Fondo rosa brillante para los mensajes */
+    color: #ffffff !important; /* Texto blanco */
+    border-radius: 15px !important;
+    padding: 15px !important;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5) !important; /* Sombra blanca */
 }
