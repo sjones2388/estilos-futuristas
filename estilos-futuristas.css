@@ -1,14 +1,14 @@
-/* Fondo general claro */
+/* Fondo general blanco y rojo */
 body {
     font-family: "Helvetica Neue", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ece5dd;
+    background-color: #ffffff; /* Blanco */
 }
 
-/* Cabecera del chat con estilo WhatsApp */
+/* Cabecera del chat */
 .bpw-header-container {
-    background-color: #075E54 !important; /* Verde WhatsApp */
+    background-color: #D32F2F !important; /* Rojo oscuro */
     color: #ffffff;
     font-weight: bold;
     height: 60px;
@@ -23,7 +23,7 @@ body {
 
 /* Fondo del chat */
 .bpw-msg-list-container {
-    background-color: #ece5dd !important;
+    background-color: #ffebee !important; /* Rojo claro */
     padding: 20px;
     overflow-y: auto;
     height: calc(100vh - 120px);
@@ -31,22 +31,23 @@ body {
 
 /* Mensaje del bot */
 .bpw-chat-bubble.bp-bubble-text {
-    background-color: #ffffff !important;
+    background-color: #ffffff !important; /* Blanco */
     color: #000000 !important;
-    border: 1px solid #e5e5e5;
-    border-radius: 7.5px 7.5px 7.5px 0;
+    border: 1px solid #D32F2F;
+    border-radius: 15px;
     padding: 10px;
     margin-bottom: 10px;
     max-width: 80%;
+    position: relative;
     margin-right: auto;
     word-wrap: break-word;
 }
 
 /* Mensaje del usuario */
 .bpw-chat-bubble.bp-bubble-text[data-from="Me"] {
-    background-color: #dcf8c6 !important;
+    background-color: #ffcdd2 !important; /* Rojo muy claro */
     color: #000000 !important;
-    border-radius: 7.5px 7.5px 0 7.5px;
+    border-radius: 15px;
     padding: 10px;
     margin-bottom: 10px;
     max-width: 80%;
@@ -54,28 +55,33 @@ body {
     word-wrap: break-word;
 }
 
+/* Imagen del perfil */
+.bpw-chat-bubble .bpw-bot-avatar img {
+    content: url('https://www.construex.com.ar/images/upload/461/org/63e400e587db11.49012960.png') !important;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
 /* Campo de texto */
 .bpw-composer textarea#input-message {
     background-color: #ffffff !important;
     color: #000000 !important;
-    border: 1px solid #ddd !important;
+    border: 1px solid #D32F2F !important;
     padding: 10px !important;
     border-radius: 20px !important;
     font-size: 14px !important;
     line-height: 1.5 !important;
-    width: calc(100% - 60px); /* Ajuste de ancho para dejar espacio al botón de enviar */
-    margin-right: 10px;
+    width: calc(100% - 60px); 
     box-shadow: none;
     resize: none;
     height: 40px;
 }
 
-/* Botón de envío */
+/* Enviar como icono */
 .bpw-send-buttons button {
-    background-color: #075E54 !important;
-    color: #ffffff !important;
+    background-color: transparent !important;
     border: none;
-    border-radius: 50%;
     width: 40px;
     height: 40px;
     display: flex;
@@ -83,25 +89,15 @@ body {
     align-items: center;
     font-size: 18px;
     cursor: pointer;
-    margin-left: -50px; /* Posición para ajustarlo a la derecha del campo de texto */
-    transition: background-color 0.3s ease;
     position: absolute;
     right: 15px;
     bottom: 12px;
 }
 
-.bpw-send-buttons button:hover {
-    background-color: #128C7E !important;
-}
-
-/* Ajustar el diseño del contenedor del campo de texto */
-.bpw-composer-inner {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border-top: 1px solid #ddd;
-    position: relative;
+.bpw-send-buttons button:before {
+    content: '🚀'; /* Usar un cohete como icono de envío */
+    font-size: 24px;
+    color: #D32F2F;
 }
 
 /* Ajustes visuales generales */
@@ -109,16 +105,6 @@ body {
 .bpw-composer textarea#input-message,
 .bpw-send-buttons button {
     transition: all 0.3s ease-in-out !important;
-}
-
-/* Sombra sutil para los mensajes */
-.bpw-chat-bubble.bp-bubble-text {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-/* Títulos y textos */
-h1, h2, h3, h4 {
-    color: #075E54;
 }
 
 
