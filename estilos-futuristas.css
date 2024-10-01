@@ -55,8 +55,8 @@ body {
     word-wrap: break-word;
 }
 
-/* Imagen del perfil */
-.bpw-bot-avatar img, .bpw-bot-avatar, .bpw-avatar img {
+/* Eliminar la letra "B" y mostrar solo la imagen de perfil */
+.bpw-bot-avatar img, .bpw-avatar img {
     background-image: url('https://www.construex.com.ar/images/upload/461/org/63e400e587db11.49012960.png') !important;
     background-size: cover !important;
     background-position: center !important;
@@ -64,6 +64,18 @@ body {
     width: 40px !important;
     height: 40px !important;
     display: inline-block;
+    content: '';
+}
+
+/* Ocultar la inicial (letra "B") */
+.bpw-bot-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bpw-bot-avatar span {
+    display: none !important; /* Oculta la letra */
 }
 
 /* Campo de texto */
